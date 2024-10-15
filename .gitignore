@@ -163,3 +163,4 @@ cython_debug/
 
 uv.lock
 data/data.db
+.DS_Store
