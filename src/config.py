@@ -10,7 +10,7 @@ load_dotenv()
 
 
 class Config:
-    TEST = True
+    TEST = False
 
 
 class Member(TypedDict):
