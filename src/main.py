@@ -131,11 +131,7 @@ if __name__ == "__main__":
             print("Started pasori thread")
 
         stdin_thread = start_thread(read_from_stdin, queue)
-        print("Started stdin thread")
-
         main_thread = start_thread(main, queue)
-        print("Started main thread")
-
         print("Input Number: ", end="", flush=True)
 
         while True:
