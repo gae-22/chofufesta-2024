@@ -6,7 +6,6 @@ from datetime import date
 from queue import Queue
 
 from config import Config, setup_logging
-from clear_buffer import clear_input_buffer
 from audio import Audio
 from get_idm import NFCReader
 from database import GetMember
@@ -61,7 +60,6 @@ def read_from_pasori(queue: Queue) -> None:
         except Exception as e:
             logger.error(f"Error reading from pasori: {e}")
         finally:
-            clear_input_buffer()
             print("Input Number: ", end="", flush=True)
             time.sleep(0.5)
 
@@ -84,7 +82,6 @@ def read_from_stdin(queue: Queue) -> None:
         except Exception as e:
             logger.error(f"Error reading from stdin: {e}")
         finally:
-            clear_input_buffer()
             print("Touch Card > ", end="", flush=True)
             time.sleep(0.5)
 
